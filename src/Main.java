@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         //задание 1
         Employee employee = new Employee();
-        employee.someInfo();
+       // employee.someInfo();
 
         //задание 2
         Employee[] employees = new Employee[5];
