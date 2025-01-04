@@ -1,4 +1,4 @@
-public class Employee1 {
+public class Employee {
 
     String fullName;
     String post;
@@ -7,7 +7,7 @@ public class Employee1 {
     double salary;
     int age;
 
-    public Employee1() {
+    public Employee() {
         fullName = "Краморов Иван Семенович";
         post = "Программист";
         email = "kramIvan@gmail.ru";
@@ -16,13 +16,13 @@ public class Employee1 {
         age = 34;
     }
 
-    public Employee1(String _fullName, String _post, String _email, String _phone, double _salary, int _age) {
-        fullName = _fullName;
-        post = _post;
-        email = _email;
-        phone = _phone;
-        salary = _salary;
-        age = _age;
+    public Employee(String fullName, String post, String email, String phone, double salary, int age) {
+        this.fullName = fullName;
+        this.post = post;
+        this.email = email;
+        this.phone = phone;
+        this.salary = salary;
+        this.age = age;
     }
 
     public void someInfo() {
