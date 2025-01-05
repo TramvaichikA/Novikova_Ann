@@ -1,15 +1,20 @@
 public class Dog extends Animal {
-    String name;
-    static int nD = 0;
+    private String name;
+    static int countD = 0;
 
-    Dog(String name) {
+    public Dog(String name) {
         super();
-        nD++;
+        countD++;
         this.name = name;
     }
-
+public String getName() {
+        return name;
+}
+public  void setName(String name) {
+        this.name = name;
+}
     @Override
-    void run(int metr) {
+    public void run(int metr) {
         if (metr > 500) {
             System.out.println(name + " не умеет бегать больше 500 м");
         } else {
@@ -19,7 +24,7 @@ public class Dog extends Animal {
 
 
     @Override
-    void swim(int metr) {
+    public void swim(int metr) {
         if (metr > 10) {
             System.out.println("Собака не умеет плавать больше 10 м");
         } else {
@@ -28,7 +33,7 @@ public class Dog extends Animal {
     }
 
     static int getnD() {
-        return nD;
+        return countD;
     }
 
 }

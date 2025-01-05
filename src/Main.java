@@ -2,22 +2,21 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Animal animal = new Animal();
 
-        Cat KotO = new Cat("Кот Омлет ");
-        Cat KotG = new Cat("Кот Гамлет ");
-        Dog DogMakaronina = new Dog("Собака Макаронина ");
-        Dog DogStremyanka = new Dog("Собака Стремянка ");
+        Cat kotO = new Cat("Кот Омлет ");
+        Cat kotG = new Cat("Кот Гамлет ");
+        Dog dogMakaronina = new Dog("Собака Макаронина ");
+        Dog dogStremyanka = new Dog("Собака Стремянка ");
 
-        KotO.run(150);
-        KotG.run(250);
-        DogStremyanka.run(550);
-        DogMakaronina.run(30);
+        kotO.run(150);
+        kotG.run(250);
+        dogStremyanka.run(550);
+        dogMakaronina.run(30);
 
-        KotO.swim(20);
-        KotG.swim(6000);
-        DogMakaronina.swim(9);
-        DogStremyanka.swim(25);
+        kotO.swim(20);
+        kotG.swim(6000);
+        dogMakaronina.swim(9);
+        dogStremyanka.swim(25);
         System.out.println("Общее количество животных " + (Animal.getnA()));
         System.out.println("Количество котов " + Cat.getnC());
         System.out.println("Количество собак " + Dog.getnD());
@@ -25,10 +24,10 @@ public class Main {
 
         System.out.println("Задание 2");
         Bowl bowl = new Bowl(30);
-        Cat[] cats = {KotO, KotG};
+        Cat[] cats = {kotO, kotG};
         for (Cat cat : cats) {
             cat.eat(bowl, 10);
-            System.out.println(cat.name + "сытый");
+            System.out.println(cat.getName() + "сытый");
         }
         System.out.println("Остаток еды в миске " + bowl.getFood());
         bowl.addFood(20);
@@ -37,7 +36,7 @@ public class Main {
         for (Cat cat : cats) {
             if (!cat.isFuul()) {
                 cat.eat(bowl, 10);
-                System.out.println(cat.name + " сытый ");
+                System.out.println(cat.getName() + " сытый ");
 
             }
         }

@@ -1,22 +1,22 @@
-public class Animal {
-    static int nA = 0;
+public abstract class Animal {
+    static int countA = 0;
 
-
-    Animal() {
-
-        nA++;
+    public Animal() {
+        countA++;
     }
 
-    void run(int metr) {
+    public abstract void run(int metr) ;
+    /*{
         System.out.println("Животное пробежало " + metr + " м");
     }
-
-    void swim(int metr) {
+*/
+    public abstract void swim(int metr);
+    /*-{
         System.out.println("Животное проплыло " + metr + " м");
     }
-
+*/
     public static int getnA() {
-        return nA;
+        return countA;
     }
 
 }

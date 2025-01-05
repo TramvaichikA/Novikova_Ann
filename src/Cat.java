@@ -1,17 +1,23 @@
 public class Cat extends Animal {
-    String name;
-    static int nC = 0;
+    private String name;
+    static int countC = 0;
 
     private boolean isFuul;
 
 
-    Cat(String name) {
+    public Cat(String name) {
         super();
-        nC++;
+        countC++;
         this.name = name;
         this.isFuul = false;
+    }
 
+    public String getName() {
+        return name;
+    }
 
+    public  void setName(String name) {
+        this.name = name;
     }
 
     public void eat(Bowl bowl, int nFood) {
@@ -29,7 +35,7 @@ public class Cat extends Animal {
 
 
     @Override
-    void run(int metr) {
+    public void run(int metr) {
         if (metr > 200) {
             System.out.println(name + " не умеет бегать больше 200 м");
         } else {
@@ -38,12 +44,12 @@ public class Cat extends Animal {
     }
 
     @Override
-    void swim(int metr) {
+    public void swim(int metr) {
         System.out.println("Коты не умеют плавать");
     }
 
     static int getnC() {
-        return nC;
+        return countC;
     }
 
 }
