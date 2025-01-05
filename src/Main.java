@@ -3,8 +3,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
 
@@ -25,7 +24,7 @@ public class Main {
 
         System.out.println("2. Создать телефонный справочник. Найдем телефоны, принадлежащие следующим фамилиям: Smirnova и Ivanov");
 
-        org.example.PhoneGuide guide = new org.example.PhoneGuide();
+        PhoneGuide guide = new PhoneGuide();
         guide.add("Sharova", "89990151226");
         guide.add("Ivanov", "8926145327");
         guide.add("Petrov", "8916150152");
