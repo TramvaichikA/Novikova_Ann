@@ -10,7 +10,7 @@ public class Factorial_Testng {
     @DataProvider
     public Object[][] someDate(){
         return new Object[][]{
-                {factorial(1),10},
+                {factorial(1),1},
                 {factorial(2),2},
                 {factorial(3),6},
                 {factorial(4), 24},
@@ -26,9 +26,13 @@ public class Factorial_Testng {
 
     public int factorial(int n) {
         int factorial = 1;
-        for (int i = 1; i <= n; i++) {
-            factorial *= i;
+        if (n <=0) {
+            System.out.println("Введите число больше нуля");
+        } else {
+            for (int i = 1; i <= n; i++) {
+                factorial *= i;
+            }
+            return factorial;
         }
-        return factorial;
     }
 }
